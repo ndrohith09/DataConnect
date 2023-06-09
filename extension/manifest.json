@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Data Connect",
+    "version": "1.0",
+    "permissions": ["contextMenus", "activeTab", "notifications","downloads"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "16": "logo.png",    
+      "48": "logo.png",    
+      "128": "logo.png"  
+    },
+    "content_scripts": [
+      {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
